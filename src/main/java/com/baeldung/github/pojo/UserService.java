@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface UserService {
 
-  @GET("/users")
-  public Call<List<User>> getUsers(
-          @Query("per_page") int per_page,
-          @Query("page") int page);
+    @GET("/users")
+    public Call<List<User>> getUsers(
+            @Query("per_page") int per_page,
+            @Query("page") int page);
 
-  @GET("/users/{username}")
-  public Call<User> getUser(@Path("username") String username);
+    @GET("/users/{username}")
+    public Call<User> getUser(@Path("username") String username);
 
 }
