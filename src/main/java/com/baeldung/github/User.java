@@ -1,4 +1,4 @@
-package com.baeldung.github.pojo;
+package com.baeldung.github;
 
 import com.google.gson.annotations.SerializedName;
 

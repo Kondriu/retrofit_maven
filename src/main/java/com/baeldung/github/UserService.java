@@ -1,4 +1,4 @@
-package com.baeldung.github.pojo;
+package com.baeldung.github;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -16,5 +16,9 @@ public interface UserService {
 
     @GET("/users/{username}")
     public Call<User> getUser(@Path("username") String username);
+
+    @GET("group/{id}/users")
+    Call<List<User>> groupList(@Path("id") int groupId, @Query("sort") String sort);
+
 
 }
